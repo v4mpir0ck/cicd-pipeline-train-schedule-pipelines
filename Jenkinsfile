@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Running graddle build'
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: ''dist/tranSchedule.zip
+                archiveArtifacts artifacts: 'dist/tranSchedule.zip'
             }
         }
     }
