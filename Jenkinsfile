@@ -1,6 +1,5 @@
 pipeline {
     agent nodejs
-
     stages {
         stage('Gradle build') {
             steps {
