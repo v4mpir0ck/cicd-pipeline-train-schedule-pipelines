@@ -1,10 +1,12 @@
 pipeline {
-    agent nodejs
+    agent any
     stages {
-        stage('Gradle build') {
+        stage ('Gradle build') {
             steps {
-            sh ./gradlew build --no-daemon
+                echo 'Running graddle build'
+                sh './gradlew build --no-daemon'
+                archiveArtifacts artifacts: ''dist/tranSchedule.zip
             }
         }
-
+    }
 }
